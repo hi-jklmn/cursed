@@ -55,10 +55,10 @@ void matrix_render(Screen* this, Pixel* buffer, Vec2i dimensions) {
     }
     for (int y = dimensions.y-1; y >= 0; y--) {
         for (int x = 0; x < dimensions.x; x++) {
-            if (data->buffer[y * dimensions.x + x] = 
-                    data->buffer[y * dimensions.x + x] > 0 
+            if ((data->buffer[y * dimensions.x + x] = 
+                    (data->buffer[y * dimensions.x + x] > 0 
                     ? data->buffer[y * dimensions.x + x] - 1 
-                    : 0) {
+                    : 0))) {
                 if (y < dimensions.y - 1) {
                     data->buffer[(y+1) * dimensions.x + x] = 
                         data->buffer[y * dimensions.x + x] + 1;
